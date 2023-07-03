@@ -1,0 +1,22 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/codehunt",
+        "production_uri": "mysql://root:@localhost/codehunt",
+        "blog_name": "CodeHunt",
+        "blog_title": "Coders Blog",
+        "blog_tag": "A Blog for Programmers",
+        "fb_link": "https://facebook.com/codehunt",
+        "twt_link": "https://twitter.com/codehunt",
+        "git_link": "https://github.com/codehunt",
+        "copyright": "Coders Blog 2023",
+        "gmail-username": "deepgoenkamail@gmail.com",
+        "gmail-password": "ywpklzajpbvlmewe",
+        "about_text": "I am Deep Kumar Goenka, a passionate coder specializing in Angular, Spring Boot, and Flask. My curiosity extends to the realms of AI/ML, where I explore intelligent systems that learn, adapt, and make informed decisions. I constantly seek to expand my knowledge and stay up-to-date with the latest advancements in software development. With a focus on exceptional user experiences, I create dynamic and robust applications. My journey as a coder is fueled by the joy of continuous learning, embracing new programming languages, frameworks, and emerging technologies. Deeply committed to growth, I strive to remain at the forefront of the ever-evolving coding landscape.",
+        "no_of_posts": 4,
+        "admin_username": "codingblog",
+        "admin_password": "coding@blog",
+        "upload_location": "D:\\Flask"
+    }
+}

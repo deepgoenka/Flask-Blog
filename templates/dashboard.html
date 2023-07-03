@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url({{url_for('static', filename='img/home-bg.jpg')}})">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Panel</h1>
+                            <span class="subheading">Manage your posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                  <h1>Basic Actions</h1>
+                  <a href="/edit/0"><button class="btn btn-primary">Add a New Post</button></a>
+                  <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+                  <hr>
+                <h1>Upload File</h1>
+                <div class="row">
+                    <form action="/uploader" method="post" enctype="multipart/form-data">
+                      <input type="file" name="file1">
+                      <button class="btn btn-primary" type="Submit">Submit</button>
+                    </form>
+                </div>
+                <h1>Manage Posts</h1>
+                <table class="table table-hover">
+                    <thead>
+                      <tr style="font-size: 20px">
+                        <th>Sl. No.</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                      <tr style="font-size: 17px">
+                        <td>{{post.SNo}}</td>
+                        <td>{{post.Title}}</td>
+                        <td>{{post.Date}}</td>
+                        <td><a href="/edit/{{post.SNo}}"><button type="button" class="btn btn-sm btn-warning">Edit</button></a></td>
+                        <td><a href="/delete/{{post.SNo}}"><button type="button" class="btn btn-sm btn-danger">Delete</button></a></td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+
+
+                    
+                </div>
+            </div>
+        </div>
+{% endblock %}
